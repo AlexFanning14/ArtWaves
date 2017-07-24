@@ -1,13 +1,10 @@
 <resources>
     <string name="app_name">ArtWaves</string>
-    <!--Main Activity-->
+    <!--Home Frag-->
     <string name="app_header">ArtWaves Festival 2017</string>
     <string name="intro_parag">ArtWaves is 4 years old this year... it is a vibrant community art festival based in Skerries, Co Dublin that developed through all of the arts activities that were part of the SoundWaves Festival. ArtWaves is quickly establishing itself as one of the up and coming art festivals in North Dublin and in conjunction with SoundWaves, has recently received funding from the Arts Council of Ireland and Fingal County Council.</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
-<!--NavDrawerItems-->
+    <!--NavDrawerItems-->
     <string name="nav_home">Home</string>
     <string name="nav_aims">Aims of Artwaves</string>
     <string name="nav_arttrail">ArtTrail 2017</string>
@@ -18,7 +15,9 @@
         <item>@string/nav_arttrail</item>
         <item>@string/nav_submission</item>
     </string-array>
-
-
-
+    <!--ArtTrail frag-->
+    <string name="arttrail_header">ArtTrail 2017</string>
+    <string name="arttrail_para">ArtWaves 2017 is building upon last years highly successful ArtTrail in which there were 35 retail and business venues around Skerries exhibiting artworks. We expect that this year\'s ArtTrail will feature 50+ venues. The ArtTrail will feature several guided tour/walks of the artworks exhibited around the town during the ArtWaves Festival which will utilise alternative spaces such as shop windows, empty retail units, banks, show houses, restaurants and outdoor spaces where the art will be exhibited.</string>
+    <string name="venues_header">Venues:</string>
+    <string name="btn_find">Find</string>
 </resources>

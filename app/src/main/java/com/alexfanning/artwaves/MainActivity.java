@@ -1,6 +1,7 @@
 package com.alexfanning.artwaves;
 
 import android.app.Fragment;
+import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private String mDrawerTitle;
     private String mTitle;
     ActionBarDrawerToggle mDrawerToggle;
-
+    private static int sNavPosition = 0;
+    private static final String NAV_POSITION_KEY = "navKey";
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -59,7 +61,10 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         setUpDrawerToggle();
-        new DrawerItemClickListener().selectItem(0);
+        if (savedInstanceState != null && savedInstanceState.containsKey(NAV_POSITION_KEY)){
+            sNavPosition = savedInstanceState.getInt(NAV_POSITION_KEY);
+        }
+        new DrawerItemClickListener().selectItem(sNavPosition);
     }
 
 
@@ -67,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
+            selectItem(position - 1);
         }
 
         private void selectItem(int position){
@@ -80,10 +85,14 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     fragment = new HomeFragment();
                     break;
+                case 2:
+                    fragment = new ArttrailFragment();
+                    break;
                 default:
                     break;
             }
 
+            sNavPosition = position;
             if (fragment != null){
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.content_frame,fragment).commit();
@@ -131,4 +140,9 @@ public class MainActivity extends AppCompatActivity {
         mDrawerToggle.syncState();
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        outState.putInt(NAV_POSITION_KEY,sNavPosition);
+    }
 }

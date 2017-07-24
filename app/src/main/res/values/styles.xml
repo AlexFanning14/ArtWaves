@@ -17,10 +17,15 @@
 
     <style name="TextViewStyleHeader" parent="TextViewStyle">
         <item name="android:textSize">@dimen/text_size_header</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextViewStyleNormal" parent="TextViewStyle">
         <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="TextViewStyleSmall" parent="TextViewStyle">
+        <item name="android:textSize">@dimen/text_size_small</item>
     </style>
 
 </resources>
