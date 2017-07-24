@@ -6,11 +6,17 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+<!--NavDrawerItems-->
+    <string name="nav_home">Home</string>
+    <string name="nav_aims">Aims of Artwaves</string>
+    <string name="nav_arttrail">ArtTrail 2017</string>
+    <string name="nav_submission">ArtWaves 2017 Open-Submission</string>
     <string-array name="drawer_fragment_items">
-        <item>Home</item>
-        <item>Aims of ArtWaves</item>
-        <item>ArtTrail 2017</item>
-        <item>ArtWaves 2017 Open-Submission</item>
+        <item>@string/nav_home</item>
+        <item>@string/nav_aims</item>
+        <item>@string/nav_arttrail</item>
+        <item>@string/nav_submission</item>
     </string-array>
 
 

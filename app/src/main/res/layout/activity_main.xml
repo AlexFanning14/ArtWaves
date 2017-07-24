@@ -7,18 +7,38 @@
         android:background="@color/colorBackground"
         android:layout_height="match_parent">
         <!-- The main content view -->
-        <FrameLayout
-            android:id="@+id/content_frame"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/container_toolbar">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/content_frame"/>
+
+        </LinearLayout>
         <!-- The navigation drawer -->
         <ListView android:id="@+id/left_drawer"
             android:layout_width="240dp"
             android:layout_height="match_parent"
+
             android:layout_gravity="start"
             android:choiceMode="singleChoice"
-            android:divider="@android:color/transparent"
+            android:divider="@android:color/black"
             android:dividerHeight="0dp"
-            android:background="#111"/>
+            android:background="@color/colorAccent"/>
     </android.support.v4.widget.DrawerLayout>
 

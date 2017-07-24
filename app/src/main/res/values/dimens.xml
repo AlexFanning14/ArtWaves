@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_normal">22sp</dimen>
     <dimen name="text_size_header">32sp</dimen>
-
+    <dimen name="actionBarSize">50dp</dimen>
 
 </resources>
