@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         mNavigationDrawerItemTitles = getResources().getStringArray(R.array.drawer_fragment_items);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
         setUpToolbar();
 
         NavDrawerItem[] navDrawerItems = new NavDrawerItem[4];

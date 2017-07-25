@@ -88,7 +88,8 @@ public class JsonUtils {
                 String name = venue.getString(NAME_KEY);
                 String location = venue.getString(LOCATION_KEY);
                 String description = venue.getString(DESCRIPTION_KEY);
-                String coordinates = venue.getString(COORDINATES_KEY);
+                String coordinatesStr = venue.getString(COORDINATES_KEY);
+                String[] coordinates = coordinatesStr.split("\\s*,\\s*");
                 Venue v = new Venue(name,location,description,coordinates);
                 vens[i] = v;
             }
@@ -98,6 +99,6 @@ public class JsonUtils {
         }catch(Exception e){
             Log.e(TAG, "getVenuesFromJson: " + e.getMessage() );
         }
-        return null;
+        return vens;
     }
 }

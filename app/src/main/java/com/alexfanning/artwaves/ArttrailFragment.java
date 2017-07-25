@@ -5,12 +5,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alexfanning.artwaves.loaders.VenueLoader;
 import com.alexfanning.artwaves.utils.JsonUtils;
 
 
@@ -18,14 +21,18 @@ import com.alexfanning.artwaves.utils.JsonUtils;
  * A simple {@link Fragment} subclass.
 
  */
-public class ArttrailFragment extends Fragment {
+public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCallbacks<Venue[]> {
     public ArttrailFragment(){}
 
     private Context mContext;
     private RecyclerView mVenueRv;
     private VenueDataAdapter mVenueDatapter;
 
-
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mContext = context;
+    }
 
     @Nullable
     @Override
@@ -43,23 +50,39 @@ public class ArttrailFragment extends Fragment {
         mVenueRv = (RecyclerView) rootview.findViewById(R.id.rv_venues);
     }
 
-    private void setUpVenues(){
-        Venue[] vens = JsonUtils.getVens();
-//        Venue[] vens = new Venue[2];
-//        vens[0] = new Venue("ArtPark 2017","Sculpture Garden, Ardgillan Castle","A new feature in conjunction with Ardgillan Castle, we are creating a temporary Sculpture Garden within the Castle grounds. Works for this will be chosen through the ArtWaves Open-Submission.","1000");
-//        vens[1] = new Venue("RunOfTheMill 2017","ArtWaves Exhibition, Skerries Mills","This exhibition has been running since the inception of SoundWaves Festival in 2004, and is also the starting point for our ArtTrail Guided Tours/Walk.","1000");
-        mVenueDatapter = new VenueDataAdapter(vens,mContext);
-        mVenueRv.setAdapter(mVenueDatapter);
+    @Override
+    public Loader<Venue[]> onCreateLoader(int id, Bundle args) {
+        return new VenueLoader(mContext);
+    }
 
+    private void setUpVenues(){
+        getLoaderManager().initLoader(VenueLoader.VENUE_LOADER_ID,null,this);
+        LoaderManager lm = getLoaderManager();
+        Loader<Venue[]> venueLoader = lm.getLoader(VenueLoader.VENUE_LOADER_ID);
+        if (venueLoader == null){
+            lm.initLoader(VenueLoader.VENUE_LOADER_ID,null,this);
+        }else{
+            lm.restartLoader(VenueLoader.VENUE_LOADER_ID,null,this).forceLoad();
+        }
 
     }
 
 
+    @Override
+    public void onLoadFinished(Loader<Venue[]> loader, Venue[] venues) {
+        if (venues == null){
+//            Error getting venues
+        }else if (venues.length == 0){
+            //There was no venues
+        }else{
+            mVenueDatapter = new VenueDataAdapter(venues,mContext);
+            mVenueRv.setAdapter(mVenueDatapter);
+        }
+    }
 
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mContext = context;
+    public void onLoaderReset(Loader<Venue[]> loader) {
+
     }
 }

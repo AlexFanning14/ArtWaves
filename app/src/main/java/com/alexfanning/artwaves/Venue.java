@@ -9,12 +9,12 @@ public class Venue {
     private String name;
     private String location;
     private String description;
-    private String coordinates;
+    private String[] coordinates;
 
     public Venue(){
 
     }
-    public Venue(String name, String location, String description, String coordinates) {
+    public Venue(String name, String location, String description, String[] coordinates) {
         this.name = name;
         this.location = location;
         this.description = description;
@@ -45,11 +45,11 @@ public class Venue {
         this.description = description;
     }
 
-    public String getCoordinates() {
+    public String[] getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(String coordinates) {
+    public void setCoordinates(String[] coordinates) {
         this.coordinates = coordinates;
     }
 
