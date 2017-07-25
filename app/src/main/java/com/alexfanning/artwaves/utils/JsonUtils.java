@@ -35,6 +35,7 @@ public class JsonUtils {
     public static Venue[] getVens(){
         String json = EMPTY_STRING;
         try{
+            String a = getJsonResponse();
             json = getJsonResponse();
         }catch (IOException e){
             Log.e(TAG, "getVens: " + e.getMessage() );

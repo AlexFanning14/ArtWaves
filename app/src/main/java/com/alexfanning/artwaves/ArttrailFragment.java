@@ -45,7 +45,9 @@ public class ArttrailFragment extends Fragment {
 
     private void setUpVenues(){
         Venue[] vens = JsonUtils.getVens();
-
+//        Venue[] vens = new Venue[2];
+//        vens[0] = new Venue("ArtPark 2017","Sculpture Garden, Ardgillan Castle","A new feature in conjunction with Ardgillan Castle, we are creating a temporary Sculpture Garden within the Castle grounds. Works for this will be chosen through the ArtWaves Open-Submission.","1000");
+//        vens[1] = new Venue("RunOfTheMill 2017","ArtWaves Exhibition, Skerries Mills","This exhibition has been running since the inception of SoundWaves Festival in 2004, and is also the starting point for our ArtTrail Guided Tours/Walk.","1000");
         mVenueDatapter = new VenueDataAdapter(vens,mContext);
         mVenueRv.setAdapter(mVenueDatapter);
 
