@@ -31,4 +31,16 @@
     <string name="bullet_point">►</string>
     <string name="newline_char">\n</string>
 
+    <!--ArtWaves Open Submission-->
+    <string name="submiss_header">ArtWaves 2017 Open-Submission</string>
+    <string name="submiss_para1">Artists and designers who live and/or work within Fingal Council area are invited to submit their work under the categories, listed below. Submission of work is restricted to those over 18 years. A panel of judges, comprising of professional artists and designers will select from the entries. We hope to attract people of all skill levels as well as students of art, design and applied arts. It is an opportunity open to everyone to have their work considered for inclusion in the ArtTrail, RunOfTheMill and ArtPark 2017 exhibitions and events. The exhibitions take place during the festival and run from 11-24th September, 2017.</string>
+    <string name="submiss_para2">Works that are accepted through our Selection Process will then be eligible for a number of corporate prizes that will be awarded from our Principal Funders, Sponsors and Supporters, at our ArtWaves Awards Night on Thursday 28th September 2017. These Awards will be judged by 3 Jury members who are important Irish Artists and Arts Administrators (tbc.) from across the category and disciplines represented in the exhibitions. Each entrant will be able to enter up to 3 artworks in any of the categories and across the listed disciplines. There is a fee of €5 per entry (max of €15 for 3 submissions + €1 transaction fee).</string>
+    <string name="submiss_cat_header">Submission Categories</string>
+    <string name="submiss_cat1">1. Fine Arts</string>
+    <string name="submiss_cat2">2. Design</string>
+    <string name="submiss_cat3">3. Applied Arts</string>
+    <string name="submiss_cat_info">Within those categories there will be the ability to further select from the following visual arts disciplines that best describe the artwork(s) which artists submit.  (many of which cross the categories)\nPerformance; Sculpture; Painting; Drawing; Installation; Site Specific Film/Video; Illustration; Photography; Artist books; Graphic Design; Product Design; Furniture Design; Interactive; Jewellery/Silversmithing; Textiles; Print-making; Animation; Ceramics; Glass; and also a catch all \'Other\' option as well.</string>
+    <string name="enter_header">How To Enter</string>
+    <string name="enter_info">Once you\'re ready to make your submission, head over to our submission page on our website at https://www.culturefestskerries.com/artwaves-open-submission2017</string>
+
 </resources>

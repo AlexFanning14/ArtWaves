@@ -1,0 +1,102 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alexfanning.artwaves.fragments.SubmissionFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/tv_submission_header"
+                style="@style/TextViewStyleHeader"
+                android:text="@string/submiss_header"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleNormalSmall"
+                android:text="@string/submiss_para1"
+                android:layout_margin="@dimen/margin_standard"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleNormalSmall"
+                android:text="@string/submiss_para2"
+                android:layout_margin="@dimen/margin_standard"
+                />
+
+            <TextView
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleHeaderSmall"
+                android:text="@string/submiss_cat_header"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleNormal"
+                android:text="@string/submiss_cat1"
+                android:layout_margin="@dimen/margin_standard"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleNormal"
+                android:text="@string/submiss_cat2"
+                android:layout_margin="@dimen/margin_standard"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleNormal"
+                android:text="@string/submiss_cat3"
+                android:layout_margin="@dimen/margin_standard"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleNormalSmall"
+                android:text="@string/submiss_cat_info"
+                android:layout_margin="@dimen/margin_standard"
+                />
+
+            <TextView
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleHeaderSmall"
+                android:text="@string/enter_header"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStyleNormalSmall"
+                android:autoLink="web"
+                android:text="@string/enter_info"
+                android:layout_margin="@dimen/margin_standard"
+                android:textColorLink="@color/colorPrimaryDark"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+</FrameLayout>

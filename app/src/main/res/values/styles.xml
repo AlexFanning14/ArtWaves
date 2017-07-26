@@ -20,8 +20,16 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextViewStyleHeaderSmall" parent="TextViewStyle">
+        <item name="android:textSize">@dimen/text_size_mini_header</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextViewStyleNormal" parent="TextViewStyle">
         <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+    <style name="TextViewStyleNormalSmall" parent="TextViewStyle">
+        <item name="android:textSize">@dimen/text_size_normal_small</item>
     </style>
 
     <style name="TextViewStyleSmall" parent="TextViewStyle">
