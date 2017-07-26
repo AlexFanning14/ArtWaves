@@ -6,7 +6,7 @@
     android:background="@color/colorBackground"
     android:weightSum="5"
     android:orientation="vertical"
-    tools:context="com.alexfanning.artwaves.HomeFragment">
+    tools:context="com.alexfanning.artwaves.fragments.HomeFragment">
 
     <TextView
         android:id="@+id/tvHeader"

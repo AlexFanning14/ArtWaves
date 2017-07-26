@@ -1,6 +1,5 @@
 package com.alexfanning.artwaves;
 
-import android.app.Fragment;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -13,9 +12,11 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.alexfanning.artwaves.fragments.AimsFragment;
+import com.alexfanning.artwaves.fragments.ArttrailFragment;
+import com.alexfanning.artwaves.fragments.HomeFragment;
 import com.alexfanning.artwaves.navdrawer.DrawerItemCustomAdapter;
 import com.alexfanning.artwaves.navdrawer.NavDrawerItem;
 
@@ -83,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
             switch (position){
                 case 0:
                     fragment = new HomeFragment();
+                    break;
+                case 1:
+                    fragment = new AimsFragment();
                     break;
                 case 2:
                     fragment = new ArttrailFragment();

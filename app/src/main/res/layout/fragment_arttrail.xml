@@ -4,7 +4,9 @@
 
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/scroll_view_arttail"
+    >
 
 <LinearLayout
 
@@ -51,6 +53,26 @@
         android:id="@+id/rv_venues"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tv_error_venue"
+        android:text="@string/ven_error"
+        style="@style/TextViewStyleNormal"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:layout_width="@dimen/prog_bar_size"
+        android:layout_height="@dimen/prog_bar_size"
+        android:layout_gravity="center"
+        android:id="@+id/ven_progbar"
+        android:visibility="gone"
+
         />
 
 

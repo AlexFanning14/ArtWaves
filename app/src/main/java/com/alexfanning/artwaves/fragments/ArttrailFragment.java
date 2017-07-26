@@ -1,4 +1,4 @@
-package com.alexfanning.artwaves;
+package com.alexfanning.artwaves.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,7 +12,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
+import com.alexfanning.artwaves.R;
+import com.alexfanning.artwaves.Venue;
+import com.alexfanning.artwaves.VenueDataAdapter;
 import com.alexfanning.artwaves.loaders.VenueLoader;
 import com.alexfanning.artwaves.utils.JsonUtils;
 
@@ -27,7 +33,8 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
     private Context mContext;
     private RecyclerView mVenueRv;
     private VenueDataAdapter mVenueDatapter;
-
+    private ProgressBar mProgBar;
+    private TextView mTextViewError;
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -47,12 +54,19 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
         return rootView;
     }
     private void findViews(View rootview){
+        ScrollView sv = (ScrollView) rootview.findViewById(R.id.scroll_view_arttail);
+        sv.setFocusableInTouchMode(true);
+        sv.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
         mVenueRv = (RecyclerView) rootview.findViewById(R.id.rv_venues);
+        mProgBar = (ProgressBar) rootview.findViewById(R.id.ven_progbar);
+        mTextViewError = (TextView) rootview.findViewById(R.id.tv_error_venue);
     }
 
     @Override
     public Loader<Venue[]> onCreateLoader(int id, Bundle args) {
+        mProgBar.setVisibility(View.VISIBLE);
         return new VenueLoader(mContext);
+
     }
 
     private void setUpVenues(){
@@ -70,11 +84,15 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
 
     @Override
     public void onLoadFinished(Loader<Venue[]> loader, Venue[] venues) {
+        mProgBar.setVisibility(View.GONE);
         if (venues == null){
-//            Error getting venues
+            mTextViewError.setVisibility(View.VISIBLE);
+            mVenueRv.setVisibility(View.INVISIBLE);
         }else if (venues.length == 0){
             //There was no venues
         }else{
+            mTextViewError.setVisibility(View.GONE);
+            mVenueRv.setVisibility(View.VISIBLE);
             mVenueDatapter = new VenueDataAdapter(venues,mContext);
             mVenueRv.setAdapter(mVenueDatapter);
         }
@@ -83,6 +101,6 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
 
     @Override
     public void onLoaderReset(Loader<Venue[]> loader) {
-
+//        Do nothing
     }
 }

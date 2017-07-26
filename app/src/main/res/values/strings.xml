@@ -15,9 +15,20 @@
         <item>@string/nav_arttrail</item>
         <item>@string/nav_submission</item>
     </string-array>
+
     <!--ArtTrail frag-->
     <string name="arttrail_header">ArtTrail 2017</string>
     <string name="arttrail_para">ArtWaves 2017 is building upon last years highly successful ArtTrail in which there were 35 retail and business venues around Skerries exhibiting artworks. We expect that this year\'s ArtTrail will feature 50+ venues. The ArtTrail will feature several guided tour/walks of the artworks exhibited around the town during the ArtWaves Festival which will utilise alternative spaces such as shop windows, empty retail units, banks, show houses, restaurants and outdoor spaces where the art will be exhibited.</string>
     <string name="venues_header">Venues:</string>
     <string name="btn_find">Find</string>
+    <string name="ven_error">Apologies there has been an error loading the venues. Check network connection.</string>
+
+    <!-- Aims of Artwaves -->
+    <string name="aims_header">The Aims of ArtWaves is to: </string>
+    <string name="aims_1">Provide a platform for artistic engagement between local artists and the community.</string>
+    <string name="aims_2">Promote audience participation inclusive of multi-cultural and multi-disciplined artistic practices.</string>
+    <string name="aims_3">Develop a strong artistic vision that is key to sustaining art at a local level for the community.</string>
+    <string name="bullet_point">►</string>
+    <string name="newline_char">\n</string>
+
 </resources>

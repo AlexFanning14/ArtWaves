@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.alexfanning.artwaves.fragments.AimsFragment"
+    android:weightSum="3">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyleHeader"
+        android:text="@string/aims_header"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/margin_standard"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyleNormal"
+        android:layout_margin="@dimen/margin_standard"
+        android:layout_weight="2"
+        android:id="@+id/tv_bullet_points"
+
+        />
+
+
+
+</LinearLayout>
