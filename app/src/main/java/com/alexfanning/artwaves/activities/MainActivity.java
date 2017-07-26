@@ -1,4 +1,4 @@
-package com.alexfanning.artwaves;
+package com.alexfanning.artwaves.activities;
 
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.alexfanning.artwaves.R;
 import com.alexfanning.artwaves.fragments.AimsFragment;
 import com.alexfanning.artwaves.fragments.ArttrailFragment;
 import com.alexfanning.artwaves.fragments.HomeFragment;
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         setUpToolbar();
-
         NavDrawerItem[] navDrawerItems = new NavDrawerItem[4];
 
         navDrawerItems[0] = new NavDrawerItem(R.drawable.ic_art_icon,getString(R.string.nav_home));
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             selectItem(position - 1);
+
         }
 
         private void selectItem(int position){
@@ -81,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-            // TODO remove harcoded values
             switch (position){
                 case 0:
                     fragment = new HomeFragment();
@@ -107,8 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 mDrawerList.setItemChecked(position,true);
                 mDrawerList.setSelection(position);
                 setTitle(mNavigationDrawerItemTitles[position]);
-
-
                 mDrawerLayout.closeDrawer(mDrawerList);
             }else{
                 Log.e(TAG, "error creating fragemnt");
@@ -139,11 +137,14 @@ public class MainActivity extends AppCompatActivity {
     private void setUpToolbar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     private void setUpDrawerToggle(){
         mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,toolbar,R.string.app_name,R.string.app_name);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerToggle.syncState();
     }
 

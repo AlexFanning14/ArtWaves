@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">ArtWaves</string>
+    <string name="app_name" translatable="false">ArtWaves</string>
     <!--Home Frag-->
-    <string name="app_header">ArtWaves Festival 2017</string>
-    <string name="intro_parag">ArtWaves is 4 years old this year... it is a vibrant community art festival based in Skerries, Co Dublin that developed through all of the arts activities that were part of the SoundWaves Festival. ArtWaves is quickly establishing itself as one of the up and coming art festivals in North Dublin and in conjunction with SoundWaves, has recently received funding from the Arts Council of Ireland and Fingal County Council.</string>
+    <string name="app_header" translatable="true">ArtWaves Festival 2017</string>
+    <string name="intro_parag" translatable="true">ArtWaves is 4 years old this year... it is a vibrant community art festival based in Skerries, Co Dublin that developed through all of the arts activities that were part of the SoundWaves Festival. ArtWaves is quickly establishing itself as one of the up and coming art festivals in North Dublin and in conjunction with SoundWaves, has recently received funding from the Arts Council of Ireland and Fingal County Council.</string>
 
     <!--NavDrawerItems-->
-    <string name="nav_home">Home</string>
-    <string name="nav_aims">Aims of Artwaves</string>
-    <string name="nav_arttrail">ArtTrail 2017</string>
-    <string name="nav_submission">ArtWaves 2017 Open-Submission</string>
-    <string-array name="drawer_fragment_items">
+    <string name="nav_home" translatable="false">Home</string>
+    <string name="nav_aims" translatable="false">Aims of Artwaves</string>
+    <string name="nav_arttrail" translatable="false">ArtTrail 2017</string>
+    <string name="nav_submission" translatable="false">ArtWaves 2017 Open-Submission</string>
+    <string-array name="drawer_fragment_items" translatable="false">
         <item>@string/nav_home</item>
         <item>@string/nav_aims</item>
         <item>@string/nav_arttrail</item>
@@ -17,30 +17,30 @@
     </string-array>
 
     <!--ArtTrail frag-->
-    <string name="arttrail_header">ArtTrail 2017</string>
-    <string name="arttrail_para">ArtWaves 2017 is building upon last years highly successful ArtTrail in which there were 35 retail and business venues around Skerries exhibiting artworks. We expect that this year\'s ArtTrail will feature 50+ venues. The ArtTrail will feature several guided tour/walks of the artworks exhibited around the town during the ArtWaves Festival which will utilise alternative spaces such as shop windows, empty retail units, banks, show houses, restaurants and outdoor spaces where the art will be exhibited.</string>
-    <string name="venues_header">Venues:</string>
-    <string name="btn_find">Find</string>
-    <string name="ven_error">Apologies there has been an error loading the venues. Check network connection.</string>
+    <string name="arttrail_header" translatable="true">ArtTrail 2017</string>
+    <string name="arttrail_para" translatable="true">ArtWaves 2017 is building upon last years highly successful ArtTrail in which there were 35 retail and business venues around Skerries exhibiting artworks. We expect that this year\'s ArtTrail will feature 50+ venues. The ArtTrail will feature several guided tour/walks of the artworks exhibited around the town during the ArtWaves Festival which will utilise alternative spaces such as shop windows, empty retail units, banks, show houses, restaurants and outdoor spaces where the art will be exhibited.</string>
+    <string name="venues_header" translatable="true">Venues:</string>
+    <string name="btn_find" translatable="true">View in Maps</string>
+    <string name="ven_error" translatable="true">Apologies there has been an error loading the venues. Check network connection.</string>
 
     <!-- Aims of Artwaves -->
-    <string name="aims_header">The Aims of ArtWaves is to: </string>
-    <string name="aims_1">Provide a platform for artistic engagement between local artists and the community.</string>
-    <string name="aims_2">Promote audience participation inclusive of multi-cultural and multi-disciplined artistic practices.</string>
-    <string name="aims_3">Develop a strong artistic vision that is key to sustaining art at a local level for the community.</string>
-    <string name="bullet_point">►</string>
-    <string name="newline_char">\n</string>
+    <string name="aims_header" translatable="true">The Aims of ArtWaves is to: </string>
+    <string name="aims_1" translatable="true">Provide a platform for artistic engagement between local artists and the community.</string>
+    <string name="aims_2" translatable="true">Promote audience participation inclusive of multi-cultural and multi-disciplined artistic practices.</string>
+    <string name="aims_3" translatable="true">Develop a strong artistic vision that is key to sustaining art at a local level for the community.</string>
+    <string name="bullet_point" translatable="false">►</string>
+    <string name="newline_char" translatable="false">\n</string>
 
     <!--ArtWaves Open Submission-->
-    <string name="submiss_header">ArtWaves 2017 Open-Submission</string>
-    <string name="submiss_para1">Artists and designers who live and/or work within Fingal Council area are invited to submit their work under the categories, listed below. Submission of work is restricted to those over 18 years. A panel of judges, comprising of professional artists and designers will select from the entries. We hope to attract people of all skill levels as well as students of art, design and applied arts. It is an opportunity open to everyone to have their work considered for inclusion in the ArtTrail, RunOfTheMill and ArtPark 2017 exhibitions and events. The exhibitions take place during the festival and run from 11-24th September, 2017.</string>
-    <string name="submiss_para2">Works that are accepted through our Selection Process will then be eligible for a number of corporate prizes that will be awarded from our Principal Funders, Sponsors and Supporters, at our ArtWaves Awards Night on Thursday 28th September 2017. These Awards will be judged by 3 Jury members who are important Irish Artists and Arts Administrators (tbc.) from across the category and disciplines represented in the exhibitions. Each entrant will be able to enter up to 3 artworks in any of the categories and across the listed disciplines. There is a fee of €5 per entry (max of €15 for 3 submissions + €1 transaction fee).</string>
-    <string name="submiss_cat_header">Submission Categories</string>
-    <string name="submiss_cat1">1. Fine Arts</string>
-    <string name="submiss_cat2">2. Design</string>
-    <string name="submiss_cat3">3. Applied Arts</string>
-    <string name="submiss_cat_info">Within those categories there will be the ability to further select from the following visual arts disciplines that best describe the artwork(s) which artists submit.  (many of which cross the categories)\nPerformance; Sculpture; Painting; Drawing; Installation; Site Specific Film/Video; Illustration; Photography; Artist books; Graphic Design; Product Design; Furniture Design; Interactive; Jewellery/Silversmithing; Textiles; Print-making; Animation; Ceramics; Glass; and also a catch all \'Other\' option as well.</string>
-    <string name="enter_header">How To Enter</string>
-    <string name="enter_info">Once you\'re ready to make your submission, head over to our submission page on our website at https://www.culturefestskerries.com/artwaves-open-submission2017</string>
+    <string name="submiss_header" translatable="true">ArtWaves 2017 Open-Submission</string>
+    <string name="submiss_para1" translatable="true">Artists and designers who live and/or work within Fingal Council area are invited to submit their work under the categories, listed below. Submission of work is restricted to those over 18 years. A panel of judges, comprising of professional artists and designers will select from the entries. We hope to attract people of all skill levels as well as students of art, design and applied arts. It is an opportunity open to everyone to have their work considered for inclusion in the ArtTrail, RunOfTheMill and ArtPark 2017 exhibitions and events. The exhibitions take place during the festival and run from 11-24th September, 2017.</string>
+    <string name="submiss_para2" translatable="true">Works that are accepted through our Selection Process will then be eligible for a number of corporate prizes that will be awarded from our Principal Funders, Sponsors and Supporters, at our ArtWaves Awards Night on Thursday 28th September 2017. These Awards will be judged by 3 Jury members who are important Irish Artists and Arts Administrators (tbc.) from across the category and disciplines represented in the exhibitions. Each entrant will be able to enter up to 3 artworks in any of the categories and across the listed disciplines. There is a fee of €5 per entry (max of €15 for 3 submissions + €1 transaction fee).</string>
+    <string name="submiss_cat_header" translatable="true">Submission Categories</string>
+    <string name="submiss_cat1" translatable="true">1. Fine Arts</string>
+    <string name="submiss_cat2" translatable="true">2. Design</string>
+    <string name="submiss_cat3" translatable="true">3. Applied Arts</string>
+    <string name="submiss_cat_info" translatable="true">Within those categories there will be the ability to further select from the following visual arts disciplines that best describe the artwork(s) which artists submit.  (many of which cross the categories)\nPerformance; Sculpture; Painting; Drawing; Installation; Site Specific Film/Video; Illustration; Photography; Artist books; Graphic Design; Product Design; Furniture Design; Interactive; Jewellery/Silversmithing; Textiles; Print-making; Animation; Ceramics; Glass; and also a catch all \'Other\' option as well.</string>
+    <string name="enter_header" translatable="true">How To Enter</string>
+    <string name="enter_info" translatable="true">Once you\'re ready to make your submission, head over to our submission page on our website at https://www.culturefestskerries.com/artwaves-open-submission2017</string>
 
 </resources>

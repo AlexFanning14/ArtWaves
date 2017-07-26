@@ -1,10 +1,9 @@
-package com.alexfanning.artwaves.loaders;
+package com.alexfanning.artwaves.venueitems;
 
 
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 
-import com.alexfanning.artwaves.Venue;
 import com.alexfanning.artwaves.utils.JsonUtils;
 
 /**

@@ -2,7 +2,7 @@ package com.alexfanning.artwaves.utils;
 
 import android.util.Log;
 
-import com.alexfanning.artwaves.Venue;
+import com.alexfanning.artwaves.venueitems.Venue;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +29,7 @@ public class JsonUtils {
     private static final String LOCATION_KEY = "location";
     private static final String DESCRIPTION_KEY = "description";
     private static final String COORDINATES_KEY = "coordinates";
+    private static final String SCANNER_DELIMETTER = "\\A";
 
     private static Venue[] vens;
 
@@ -60,7 +61,7 @@ public class JsonUtils {
             InputStream in = urlConnection.getInputStream();
 
             Scanner scanner = new Scanner(in);
-            scanner.useDelimiter("\\A");
+            scanner.useDelimiter(SCANNER_DELIMETTER);
 
             boolean hasInput = scanner.hasNext();
             if (hasInput) {

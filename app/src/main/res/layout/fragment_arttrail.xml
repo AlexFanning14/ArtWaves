@@ -1,84 +1,76 @@
-<FrameLayout android:layout_height="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    android:layout_height="match_parent">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/scroll_view_arttail"
-    >
-
-<LinearLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorBackground"
-    android:orientation="vertical"
-    >
-    <TextView
-        android:id="@+id/tvHeaderArttrail"
+    <ScrollView
+        android:id="@+id/scroll_view_arttail"
         android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_margin="@dimen/margin_standard"
-        android:layout_weight="1"
-        android:text="@string/arttrail_header"
-        style="@style/TextViewStyleHeader"
-        />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_margin="@dimen/margin_standard"
+        <LinearLayout
 
-        android:layout_weight="3"
-        style="@style/TextViewStyleNormal"
-        android:text="@string/arttrail_para"
-        />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_venues_header"
-        style="@style/TextViewStyle"
-        android:textSize="@dimen/text_size_mini_header"
-        android:text="@string/venues_header"
-        android:gravity="center"
-        android:textStyle="bold"
-        />
+            <TextView
+                android:id="@+id/tvHeaderArttrail"
+                style="@style/TextViewStyleHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/arttrail_header" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_venues"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+            <TextView
+                style="@style/TextViewStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/tv_error_venue"
-        android:text="@string/ven_error"
-        style="@style/TextViewStyleNormal"
-        android:layout_marginTop="@dimen/margin_standard"
-        android:visibility="gone"
-        />
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="@string/arttrail_para" />
 
-    <ProgressBar
-        android:layout_width="@dimen/prog_bar_size"
-        android:layout_height="@dimen/prog_bar_size"
-        android:layout_gravity="center"
-        android:id="@+id/ven_progbar"
-        android:visibility="gone"
+            <TextView
+                android:id="@+id/tv_venues_header"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/venues_header"
+                android:textSize="@dimen/text_size_mini_header"
+                android:textStyle="bold" />
 
-        />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_venues"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
+            <TextView
+                android:id="@+id/tv_error_venue"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:gravity="center"
+                android:text="@string/ven_error"
+                android:visibility="gone" />
 
+            <ProgressBar
+                android:id="@+id/ven_progbar"
+                android:layout_width="@dimen/prog_bar_size"
+                android:layout_height="@dimen/prog_bar_size"
+                android:layout_gravity="center"
+                android:visibility="gone"
 
-</LinearLayout>
+                />
 
-</ScrollView>
+        </LinearLayout>
 
-    </FrameLayout>
+    </ScrollView>
+
+</FrameLayout>

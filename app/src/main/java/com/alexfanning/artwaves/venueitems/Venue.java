@@ -1,4 +1,4 @@
-package com.alexfanning.artwaves;
+package com.alexfanning.artwaves.venueitems;
 
 /**
  * Created by alex.fanning on 24/07/2017.

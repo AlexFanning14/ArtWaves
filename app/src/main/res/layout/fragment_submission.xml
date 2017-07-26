@@ -11,90 +11,83 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_submission_header"
+                style="@style/TextViewStyleHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:id="@+id/tv_submission_header"
-                style="@style/TextViewStyleHeader"
-                android:text="@string/submiss_header"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextViewStyleNormalSmall"
-                android:text="@string/submiss_para1"
-                android:layout_margin="@dimen/margin_standard"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextViewStyleNormalSmall"
-                android:text="@string/submiss_para2"
-                android:layout_margin="@dimen/margin_standard"
-                />
+                android:text="@string/submiss_header" />
 
             <TextView
-                android:layout_margin="@dimen/margin_standard"
+                style="@style/TextViewStyleNormalSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/submiss_para1" />
+
+            <TextView
+                style="@style/TextViewStyleNormalSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/submiss_para2" />
+
+            <TextView
                 style="@style/TextViewStyleHeaderSmall"
-                android:text="@string/submiss_cat_header"
-                />
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/TextViewStyleNormal"
-                android:text="@string/submiss_cat1"
                 android:layout_margin="@dimen/margin_standard"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextViewStyleNormal"
-                android:text="@string/submiss_cat2"
-                android:layout_margin="@dimen/margin_standard"
-                />
+                android:text="@string/submiss_cat_header" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 style="@style/TextViewStyleNormal"
-                android:text="@string/submiss_cat3"
-                android:layout_margin="@dimen/margin_standard"
-                />
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/submiss_cat1" />
+
+            <TextView
+                style="@style/TextViewStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/submiss_cat2" />
+
+            <TextView
+                style="@style/TextViewStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/submiss_cat3" />
+
+            <TextView
                 style="@style/TextViewStyleNormalSmall"
-                android:text="@string/submiss_cat_info"
-                android:layout_margin="@dimen/margin_standard"
-                />
-
-            <TextView
-                android:layout_margin="@dimen/margin_standard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/submiss_cat_info" />
+
+            <TextView
                 style="@style/TextViewStyleHeaderSmall"
-                android:text="@string/enter_header"
-                />
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:text="@string/enter_header" />
+
+            <TextView
                 style="@style/TextViewStyleNormalSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
                 android:autoLink="web"
                 android:text="@string/enter_info"
-                android:layout_margin="@dimen/margin_standard"
-                android:textColorLink="@color/colorPrimaryDark"
-                />
+                android:textColorLink="@color/colorPrimaryDark" />
 
 
         </LinearLayout>
-
-
 
 
     </ScrollView>

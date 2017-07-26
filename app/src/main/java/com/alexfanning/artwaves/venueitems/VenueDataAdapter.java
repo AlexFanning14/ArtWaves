@@ -1,4 +1,4 @@
-package com.alexfanning.artwaves;
+package com.alexfanning.artwaves.venueitems;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.alexfanning.artwaves.R;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 import java.util.Locale;
-import java.util.StringTokenizer;
 
 /**
  * Created by alex.fanning on 24/07/2017.
@@ -26,6 +26,8 @@ public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.Venu
     private int mNumberItems;
     private Context context;
 
+    private static final String GEO_STR = "geo:";
+
     public VenueDataAdapter(Venue[] venues, Context c){
         mNumberItems = venues.length;
         this.venues = venues;
@@ -37,13 +39,10 @@ public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.Venu
     public VenueDataAdapter.VenueViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         int layoutIdForGridItem = R.layout.venue_grid_item;
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(layoutIdForGridItem,parent,false);
+        View view = inflater.inflate(layoutIdForGridItem, parent, false);
         VenueViewHolder venueViewHolder = new VenueViewHolder(view);
         sViewHolderCount++;
         return venueViewHolder;
-
-
-
     }
 
     @Override
@@ -83,15 +82,9 @@ public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.Venu
         private void displayLocation(View v, int pos){
             Venue ven = venues[pos];
             String coordinates[] = ven.getCoordinates();
-            String pathStr = String.format(Locale.ENGLISH,"{0},{1}",coordinates[0],coordinates[1]);
-            String intentStr = "geo:" + coordinates[0] + "," + coordinates[1] + "?q=" + coordinates[0] + "," + coordinates[1] + "(" + ven.getName() + ")";
-            Uri.Builder builder = new Uri.Builder();
+            final String INTENT_STR = "geo:" + coordinates[0] + "," + coordinates[1] + "?q=" + coordinates[0] + "," + coordinates[1] + "(" + ven.getName() + ")";
 
-            builder.scheme("geo")
-                    .path(pathStr);
-            Uri addressUri = builder.build();
-            Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(intentStr));
-//            intent.setData(addressUri);
+            Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(INTENT_STR));
 
             if (intent.resolveActivity(context.getPackageManager()) != null){
                 context.startActivity(intent);

@@ -1,7 +1,6 @@
 package com.alexfanning.artwaves.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,10 +16,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.alexfanning.artwaves.R;
-import com.alexfanning.artwaves.Venue;
-import com.alexfanning.artwaves.VenueDataAdapter;
-import com.alexfanning.artwaves.loaders.VenueLoader;
-import com.alexfanning.artwaves.utils.JsonUtils;
+import com.alexfanning.artwaves.venueitems.Venue;
+import com.alexfanning.artwaves.venueitems.VenueDataAdapter;
+import com.alexfanning.artwaves.venueitems.VenueLoader;
 
 
 /**
