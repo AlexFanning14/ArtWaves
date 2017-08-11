@@ -6,11 +6,9 @@ package com.alexfanning.artwaves.navdrawer;
 
 public class NavDrawerItem {
 
-    public int icon;
     public String name;
 
-    public NavDrawerItem(int icon, String name){
-        this.icon = icon;
+    public NavDrawerItem(String name){
         this.name = name;
     }
 

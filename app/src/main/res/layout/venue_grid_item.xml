@@ -46,6 +46,8 @@
 
     </LinearLayout>
 
+    <!--Expandable text view library taken from https://github.com/Manabu-GT/ExpandableTextView-->
+
     <com.ms.square.android.expandabletextview.ExpandableTextView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
         android:id="@+id/expand_text_view"

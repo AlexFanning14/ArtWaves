@@ -38,10 +38,8 @@ public class JsonUtils {
         try{
             String a = getJsonResponse();
             json = getJsonResponse();
-        }catch (IOException e){
-            Log.e(TAG, "getVens: " + e.getMessage() );
-        }catch (Exception e){
-            Log.e(TAG, "getVens: " + e.getMessage() );
+        }catch (Exception e) {
+            return null;
         }
         Venue[] vens =  getVenuesFromJson(json);
         return vens;
@@ -51,10 +49,8 @@ public class JsonUtils {
        URL url = null;
         try{
             url = new URL(URL_STR);
-        }catch (MalformedURLException e){
-            Log.e(TAG, "getJsonResponse: error " );
-        }catch (Exception e){
-            Log.e(TAG, "getJsonResponse: error " );
+        }catch (Exception e) {
+            return null;
         }
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
@@ -94,12 +90,10 @@ public class JsonUtils {
                 Venue v = new Venue(name,location,description,coordinates);
                 vens[i] = v;
             }
-
-        }catch(JSONException e){
-            Log.e(TAG, "getVenuesFromJson: " + e.getMessage() );
-        }catch(Exception e){
-            Log.e(TAG, "getVenuesFromJson: " + e.getMessage() );
+            return vens;
+        }catch(Exception e) {
+            return null;
         }
-        return vens;
+
     }
 }

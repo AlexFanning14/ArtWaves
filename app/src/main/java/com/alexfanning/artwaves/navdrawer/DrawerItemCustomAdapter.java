@@ -39,12 +39,10 @@ public class DrawerItemCustomAdapter extends ArrayAdapter<NavDrawerItem> {
         LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
         listItem = inflater.inflate(layoutResourceID,parent,false);
 
-        ImageView imageViewIcon = (ImageView) listItem.findViewById(R.id.imageViewIcon);
         TextView textViewName = (TextView) listItem.findViewById(R.id.tv_drawer);
 
         NavDrawerItem item = items[position];
 
-        imageViewIcon.setImageResource(item.icon);
         textViewName.setText(item.name);
 
         return listItem;

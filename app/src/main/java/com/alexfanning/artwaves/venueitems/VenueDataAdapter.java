@@ -92,12 +92,6 @@ public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.Venu
 
         }
 
-
-
-
-
-
-
         void bind(Venue v){
             tvDescript.setText(v.getDescription());
             tvVenueName.setText(v.getName());

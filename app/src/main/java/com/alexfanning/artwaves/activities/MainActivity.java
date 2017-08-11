@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         setUpToolbar();
         NavDrawerItem[] navDrawerItems = new NavDrawerItem[4];
 
-        navDrawerItems[0] = new NavDrawerItem(R.drawable.ic_art_icon,getString(R.string.nav_home));
-        navDrawerItems[1] = new NavDrawerItem(R.drawable.ic_art_icon,getString(R.string.nav_aims));
-        navDrawerItems[2] = new NavDrawerItem(R.drawable.ic_art_icon,getString(R.string.nav_arttrail));
-        navDrawerItems[3] = new NavDrawerItem(R.drawable.ic_art_icon,getString(R.string.nav_submission));
+        navDrawerItems[0] = new NavDrawerItem(getString(R.string.nav_home));
+        navDrawerItems[1] = new NavDrawerItem(getString(R.string.nav_aims));
+        navDrawerItems[2] = new NavDrawerItem(getString(R.string.nav_arttrail));
+        navDrawerItems[3] = new NavDrawerItem(getString(R.string.nav_submission));
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -108,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 mDrawerList.setSelection(position);
                 setTitle(mNavigationDrawerItemTitles[position]);
                 mDrawerLayout.closeDrawer(mDrawerList);
-            }else{
-                Log.e(TAG, "error creating fragemnt");
             }
         }
     }
@@ -137,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
     private void setUpToolbar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 

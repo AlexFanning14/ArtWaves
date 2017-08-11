@@ -22,14 +22,6 @@
         android:textSize="@dimen/text_size_normal"
         />
 
-    <ImageView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageViewIcon"
-        android:paddingRight="@dimen/drawer_item_padding"
-        android:paddingEnd="@dimen/drawer_item_padding"
-        />
 
 
     </LinearLayout>

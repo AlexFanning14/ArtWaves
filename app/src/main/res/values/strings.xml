@@ -18,7 +18,7 @@
 
     <!--ArtTrail frag-->
     <string name="arttrail_header" translatable="true">ArtTrail 2017</string>
-    <string name="arttrail_para" translatable="true">ArtWaves 2017 is building upon last years highly successful ArtTrail in which there were 35 retail and business venues around Skerries exhibiting artworks. We expect that this year\'s ArtTrail will feature 50+ venues. The ArtTrail will feature several guided tour/walks of the artworks exhibited around the town during the ArtWaves Festival which will utilise alternative spaces such as shop windows, empty retail units, banks, show houses, restaurants and outdoor spaces where the art will be exhibited.</string>
+    <string name="arttrail_para" translatable="true">ArtWaves 2017 is building upon last years highly successful ArtTrail in which there were 35 retail and business venues around Skerries exhibiting artworks. We expect that this year\'s ArtTrail will feature 50+ venues. The ArtTrail will feature several guided tour/walks of the artworks exhibited around the town during the ArtWaves Festival which will utilise alternative spaces such as shop windows, empty retail units, banks, show houses, restaurants and outdoor spaces where the art will be exhibited.\n\nThroughout the course of the festival be sure to check out this screen for new and exciting venues.</string>
     <string name="venues_header" translatable="true">Venues:</string>
     <string name="btn_find" translatable="true">View in Maps</string>
     <string name="ven_error" translatable="true">Apologies there has been an error loading the venues. Check network connection.</string>
