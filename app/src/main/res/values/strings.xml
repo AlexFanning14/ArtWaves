@@ -43,4 +43,9 @@
     <string name="enter_header" translatable="true">How To Enter</string>
     <string name="enter_info" translatable="true">Once you\'re ready to make your submission, head over to our submission page on our website at https://www.culturefestskerries.com/artwaves-open-submission2017</string>
 
+    <!--Cotent descript-->
+    <string name="content_artwaves_img">Artwaves Logo</string>
+    <string name="content_fingal">Fingal County Council Logo</string>
+    <string name="content_arts_council">Arts Council Logo</string>
+
 </resources>

@@ -52,7 +52,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    app:srcCompat="@drawable/artwavesimg" />
+                    app:srcCompat="@drawable/artwavesimg"
+                    android:contentDescription="@string/content_artwaves_img"
+                    />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -68,7 +70,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/fingalfull" />
+                        app:srcCompat="@drawable/fingalfull"
+                        android:contentDescription="@string/content_fingal"
+                        />
 
 
                     <ImageView
@@ -77,7 +81,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/councilfull" />
+                        app:srcCompat="@drawable/councilfull"
+                        android:contentDescription="@string/content_arts_council"
+                        />
 
                 </LinearLayout>
 

@@ -17,6 +17,7 @@
         android:id="@+id/tv_drawer"
         android:layout_centerVertical="true"
         android:paddingRight="@dimen/drawer_item_padding"
+        android:paddingEnd="@dimen/drawer_item_padding"
         android:textColor="@android:color/black"
         android:textSize="@dimen/text_size_normal"
         />
@@ -26,7 +27,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageViewIcon"
-        android:paddingRight="@dimen/drawer_item_padding" />
+        android:paddingRight="@dimen/drawer_item_padding"
+        android:paddingEnd="@dimen/drawer_item_padding"
+        />
 
 
     </LinearLayout>
