@@ -106,7 +106,12 @@ public class MainActivity extends AppCompatActivity {
 
                 mDrawerList.setItemChecked(position,true);
                 mDrawerList.setSelection(position);
-                setTitle(mNavigationDrawerItemTitles[position]);
+                String title = mNavigationDrawerItemTitles[position];
+                if (title.equals(getString(R.string.nav_submission))){
+                    setTitle(getString(R.string.submission_header));
+                }else{
+                    setTitle(title);
+                }
                 mDrawerLayout.closeDrawer(mDrawerList);
             }
         }

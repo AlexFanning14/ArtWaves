@@ -2,6 +2,7 @@ package com.alexfanning.artwaves.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
@@ -33,6 +34,7 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
     private VenueDataAdapter mVenueDatapter;
     private ProgressBar mProgBar;
     private TextView mTextViewError;
+    private final String POSITION_KEY = "position_key";
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -66,6 +68,8 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
         return new VenueLoader(mContext);
 
     }
+
+
 
     private void setUpVenues(){
         getLoaderManager().initLoader(VenueLoader.VENUE_LOADER_ID,null,this);
