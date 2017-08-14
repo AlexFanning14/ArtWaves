@@ -51,9 +51,6 @@ public class MainActivity extends AppCompatActivity {
         navDrawerItems[2] = new NavDrawerItem(getString(R.string.nav_arttrail));
         navDrawerItems[3] = new NavDrawerItem(getString(R.string.nav_submission));
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.drawer_list_item,navDrawerItems);
         View header = getLayoutInflater().inflate(R.layout.drawer_header,null);
         mDrawerList.addHeaderView(header);
@@ -68,7 +65,12 @@ public class MainActivity extends AppCompatActivity {
         new DrawerItemClickListener().selectItem(sNavPosition);
     }
 
-
+    private void setUpDrawerToggle(){
+        mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,toolbar,R.string.app_name,R.string.app_name);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerToggle.syncState();
+    }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
@@ -79,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
         private void selectItem(int position){
             android.support.v4.app.Fragment fragment = null;
-
-
 
             switch (position){
                 case 0:
@@ -143,12 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setUpDrawerToggle(){
-        mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,toolbar,R.string.app_name,R.string.app_name);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
-        mDrawerToggle.syncState();
-    }
+
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
