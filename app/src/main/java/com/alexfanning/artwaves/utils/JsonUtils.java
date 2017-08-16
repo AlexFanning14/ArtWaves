@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 public class JsonUtils {
     private static final String TAG = JsonUtils.class.getSimpleName();
-    private static final String URL_STR = "https://jsonblob.com/api/jsonBlob/2b07e136-7084-11e7-9e0d-81ecfb10f882";
+    private static final String URL_STR = "https://artwaves.000webhostapp.com/arttrail.txt";
     private static final String EMPTY_STRING = "";
     private static final String VENUES_KEY = "venues";
     private static final String VENUE_KEY = "venue";

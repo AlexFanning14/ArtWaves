@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         mTitle = getTitle().toString();
         mNavigationDrawerItemTitles = getResources().getStringArray(R.array.drawer_fragment_items);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
         setUpToolbar();
         NavDrawerItem[] navDrawerItems = new NavDrawerItem[4];
 
@@ -53,10 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.drawer_list_item,navDrawerItems);
         View header = getLayoutInflater().inflate(R.layout.drawer_header,null);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mDrawerList.addHeaderView(header);
         mDrawerList.setAdapter(adapter);
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         setUpDrawerToggle();
         if (savedInstanceState != null && savedInstanceState.containsKey(NAV_POSITION_KEY)){
@@ -66,10 +66,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUpDrawerToggle(){
-        mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,toolbar,R.string.app_name,R.string.app_name);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,toolbar,R.string.app_name,R.string.app_name){
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            }
+        };
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         mDrawerToggle.setDrawerIndicatorEnabled(true);
+
         mDrawerToggle.syncState();
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -142,8 +150,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
     }
-
-
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
