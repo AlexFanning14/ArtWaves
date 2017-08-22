@@ -60,12 +60,14 @@ public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.Venu
         TextView tvVenueName = null;
         TextView tvLocation = null;
         Button btnFind = null;
+        TextView tvDate = null;
 
         public VenueViewHolder(View itemView){
             super(itemView);
             tvDescript = (ExpandableTextView) itemView.findViewById(R.id.expand_text_view);
             tvVenueName = (TextView) itemView.findViewById(R.id.tv_venue_name);
             tvLocation = (TextView) itemView.findViewById(R.id.tv_location);
+            tvDate = (TextView) itemView.findViewById(R.id.tv_venue_date);
             btnFind = (Button) itemView.findViewById(R.id.btn_find_location);
 
             View.OnClickListener btnFindList = new View.OnClickListener() {
@@ -96,6 +98,7 @@ public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.Venu
             tvDescript.setText(v.getDescription());
             tvVenueName.setText(v.getName());
             tvLocation.setText(v.getLocation());
+            tvDate.setText(v.getDate());
         }
 
     }

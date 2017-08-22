@@ -21,15 +21,16 @@ import java.util.Scanner;
 
 public class JsonUtils {
     private static final String TAG = JsonUtils.class.getSimpleName();
-    private static final String URL_STR = "https://artwaves.000webhostapp.com/arttrail.txt";
+    private static final String URL_STR = "https://artwaves.000webhostapp.com/arttrail-date.txt";
     private static final String EMPTY_STRING = "";
     private static final String VENUES_KEY = "venues";
-    private static final String VENUE_KEY = "venue";
     private static final String NAME_KEY = "name";
     private static final String LOCATION_KEY = "location";
+    private static final String DATE_KEY = "date";
     private static final String DESCRIPTION_KEY = "description";
     private static final String COORDINATES_KEY = "coordinates";
     private static final String SCANNER_DELIMETTER = "\\A";
+    private static final String COORDINATE_SPLITTER = "\\s*,\\s*";
 
     private static Venue[] vens;
 
@@ -84,10 +85,11 @@ public class JsonUtils {
                 JSONObject venue = venueJsonArray.getJSONObject(i);
                 String name = venue.getString(NAME_KEY);
                 String location = venue.getString(LOCATION_KEY);
+                String date = venue.getString(DATE_KEY);
                 String description = venue.getString(DESCRIPTION_KEY);
                 String coordinatesStr = venue.getString(COORDINATES_KEY);
-                String[] coordinates = coordinatesStr.split("\\s*,\\s*");
-                Venue v = new Venue(name,location,description,coordinates);
+                String[] coordinates = coordinatesStr.split(COORDINATE_SPLITTER);
+                Venue v = new Venue(name,location,date,description,coordinates);
                 vens[i] = v;
             }
             return vens;

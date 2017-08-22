@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/border_venue"
     android:orientation="vertical"
-    android:weightSum="4">
+    android:weightSum="5">
 
     <TextView
         android:id="@+id/tv_venue_name"
@@ -45,6 +45,18 @@
             android:text="@string/btn_find" />
 
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_venue_date"
+        style="@style/TextViewStyleNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_standard"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:textStyle="italic"
+        android:layout_weight="1"
+         />
 
     <!--Expandable text view library taken from https://github.com/Manabu-GT/ExpandableTextView-->
 

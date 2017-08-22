@@ -8,6 +8,7 @@ public class Venue {
 
     private String name;
     private String location;
+    private String date;
     private String description;
     private String[] coordinates;
 
@@ -17,6 +18,13 @@ public class Venue {
     public Venue(String name, String location, String description, String[] coordinates) {
         this.name = name;
         this.location = location;
+        this.description = description;
+        this.coordinates = coordinates;
+    }
+    public Venue(String name, String location,String date, String description, String[] coordinates) {
+        this.name = name;
+        this.location = location;
+        this.date = date;
         this.description = description;
         this.coordinates = coordinates;
     }
@@ -53,7 +61,13 @@ public class Venue {
         this.coordinates = coordinates;
     }
 
+    public String getDate() {
+        return date;
+    }
 
+    public void setDate(String date) {
+        this.date = date;
+    }
 
 
 }
