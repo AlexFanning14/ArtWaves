@@ -17,6 +17,7 @@ import android.widget.ListView;
 import com.alexfanning.artwaves.R;
 import com.alexfanning.artwaves.fragments.AimsFragment;
 import com.alexfanning.artwaves.fragments.ArttrailFragment;
+import com.alexfanning.artwaves.fragments.GalleryFragment;
 import com.alexfanning.artwaves.fragments.HomeFragment;
 import com.alexfanning.artwaves.fragments.SubmissionFragment;
 import com.alexfanning.artwaves.navdrawer.DrawerItemCustomAdapter;
@@ -43,12 +44,13 @@ public class MainActivity extends AppCompatActivity {
         mNavigationDrawerItemTitles = getResources().getStringArray(R.array.drawer_fragment_items);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         setUpToolbar();
-        NavDrawerItem[] navDrawerItems = new NavDrawerItem[4];
+        NavDrawerItem[] navDrawerItems = new NavDrawerItem[5];
 
         navDrawerItems[0] = new NavDrawerItem(getString(R.string.nav_home));
         navDrawerItems[1] = new NavDrawerItem(getString(R.string.nav_aims));
         navDrawerItems[2] = new NavDrawerItem(getString(R.string.nav_arttrail));
         navDrawerItems[3] = new NavDrawerItem(getString(R.string.nav_submission));
+        navDrawerItems[4] = new NavDrawerItem(getString(R.string.nav_gallery));
 
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.drawer_list_item,navDrawerItems);
         View header = getLayoutInflater().inflate(R.layout.drawer_header,null);
@@ -102,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 3:
                     fragment = new SubmissionFragment();
+                    break;
+                case 4:
+                    fragment = new GalleryFragment();
                     break;
                 default:
                     break;
