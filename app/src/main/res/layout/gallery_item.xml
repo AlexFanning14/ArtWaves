@@ -1,54 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 
     <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/gallery_title"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    style="@style/TextViewStyleHeader"
-    android:layout_margin="@dimen/margin_standard"
-    />
-    <ImageView
-        android:id="@+id/gallery_img"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+            <TextView
+                android:id="@+id/gallery_title"
+                style="@style/TextViewStyleHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard" />
 
-    />
+            <ImageView
+                android:id="@+id/gallery_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
 
-    <TextView
-        android:id="@+id/gallery_artist"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    style="@style/TextViewStyleHeaderSmall"
-    android:layout_margin="@dimen/margin_standard"
-    android:textStyle="italic"
-    />
+            <TextView
+                android:id="@+id/gallery_artist"
+                style="@style/TextViewStyleHeaderSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/galler_descript"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    style="@style/TextViewStyleNormal"
-    android:layout_margin="@dimen/margin_standard"
-    />
+            <TextView
+                android:id="@+id/gallery_descript"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard" />
 
 
-
-
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
 

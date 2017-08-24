@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">ArtWaves</string>
     <!--Home Frag-->
     <string name="app_header" translatable="true">ArtWaves Festival 2017</string>
-    <string name="intro_parag" translatable="true">ArtWaves is 4 years old this year... it is a vibrant community art festival based in Skerries, Co Dublin that developed through all of the arts activities that were part of the SoundWaves Festival. ArtWaves is quickly establishing itself as one of the up and coming art festivals in North Dublin and in conjunction with SoundWaves, has recently received funding from the Arts Council of Ireland and Fingal County Council.</string>
+    <string name="intro_parag" translatable="true">ArtWaves is 4 years old this year... it is a vibrant community art festival based in Skerries, Co Dublin that developed through all of the arts activities that were part of the SoundWaves Festival. ArtWaves is quickly establishing itself as one of the up and coming art festivals in North Dublin and in conjunction with SoundWaves, has recently received funding from the Arts Council of Ireland and Fingal County Council.The festival will be taking place throughout late August and September.</string>
 
     <!--NavDrawerItems-->
     <string name="nav_home" translatable="false">Home</string>
@@ -37,7 +37,7 @@
 
     <!--ArtWaves Open Submission-->
     <string name="submiss_header" translatable="true">ArtWaves 2017 Open-Submission</string>
-    <string name="submiss_para1" translatable="true">Artists and designers who live and/or work within Fingal Council area are invited to submit their work under the categories, listed below. Submission of work is restricted to those over 18 years. A panel of judges, comprising of professional artists and designers will select from the entries. We hope to attract people of all skill levels as well as students of art, design and applied arts. It is an opportunity open to everyone to have their work considered for inclusion in the ArtTrail, RunOfTheMill and ArtPark 2017 exhibitions and events. The exhibitions take place during the festival and run from 11-24th September, 2017.</string>
+    <string name="submiss_para1" translatable="true">Artists and designers who live and/or work within Fingal Council area are invited to submit their work under the categories, listed below. Submission of work is restricted to those over 18 years. A panel of judges, comprising of professional artists and designers will select from the entries. We hope to attract people of all skill levels as well as students of art, design and applied arts. It is an opportunity open to everyone to have their work considered for inclusion in the ArtTrail, RunOfTheMill and ArtPark 2017 exhibitions and events. The exhibitions take place during the festival and run from 11-24th September, 2017.<b>The deadline for submissions has been extended to Monday, 21st of August.</b></string>
     <string name="submiss_para2" translatable="true">Works that are accepted through our Selection Process will then be eligible for a number of corporate prizes that will be awarded from our Principal Funders, Sponsors and Supporters, at our ArtWaves Awards Night on Thursday 28th September 2017. These Awards will be judged by 3 Jury members who are important Irish Artists and Arts Administrators (tbc.) from across the category and disciplines represented in the exhibitions. Each entrant will be able to enter up to 3 artworks in any of the categories and across the listed disciplines. There is a fee of €5 per entry (max of €15 for 3 submissions + €1 transaction fee).</string>
     <string name="submiss_cat_header" translatable="true">Submission Categories</string>
     <string name="submiss_cat1" translatable="true">1. Fine Arts</string>
@@ -51,6 +51,9 @@
     <string name="content_artwaves_img">Artwaves Logo</string>
     <string name="content_fingal">Fingal County Council Logo</string>
     <string name="content_arts_council">Arts Council Logo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Gallery Fragment -->
 
