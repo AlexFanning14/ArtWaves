@@ -1,5 +1,6 @@
 package com.alexfanning.artwaves.activities;
 
+import android.content.Intent;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -8,7 +9,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,7 +17,6 @@ import android.widget.ListView;
 import com.alexfanning.artwaves.R;
 import com.alexfanning.artwaves.fragments.AimsFragment;
 import com.alexfanning.artwaves.fragments.ArttrailFragment;
-import com.alexfanning.artwaves.fragments.GalleryFragment;
 import com.alexfanning.artwaves.fragments.HomeFragment;
 import com.alexfanning.artwaves.fragments.SubmissionFragment;
 import com.alexfanning.artwaves.navdrawer.DrawerItemCustomAdapter;
@@ -106,8 +105,11 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new SubmissionFragment();
                     break;
                 case 4:
-                    fragment = new GalleryFragment();
-                    break;
+                    Intent i = new Intent(MainActivity.this,GalleryActivity.class);
+                    startActivity(i);
+                    return;
+                    //fragment = new GalleryFragment();
+
                 default:
                     break;
             }
@@ -151,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUpToolbar(){
+        //getSupportActionBar().hide();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

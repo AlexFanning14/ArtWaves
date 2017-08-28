@@ -34,7 +34,6 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
     private VenueDataAdapter mVenueDatapter;
     private ProgressBar mProgBar;
     private TextView mTextViewError;
-    private final String POSITION_KEY = "position_key";
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -54,9 +53,7 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
         return rootView;
     }
     private void findViews(View rootview){
-        ScrollView sv = (ScrollView) rootview.findViewById(R.id.scroll_view_arttail);
-        sv.setFocusableInTouchMode(true);
-        sv.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
+
         mVenueRv = (RecyclerView) rootview.findViewById(R.id.rv_venues);
         mProgBar = (ProgressBar) rootview.findViewById(R.id.ven_progbar);
         mTextViewError = (TextView) rootview.findViewById(R.id.tv_error_venue);
@@ -68,7 +65,6 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
         return new VenueLoader(mContext);
 
     }
-
 
 
     private void setUpVenues(){

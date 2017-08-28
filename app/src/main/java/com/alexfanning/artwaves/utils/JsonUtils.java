@@ -37,13 +37,11 @@ public class JsonUtils {
     public static Venue[] getVens(){
         String json = EMPTY_STRING;
         try{
-            String a = getJsonResponse();
             json = getJsonResponse();
         }catch (Exception e) {
             return null;
         }
-        Venue[] vens =  getVenuesFromJson(json);
-        return vens;
+        return getVenuesFromJson(json);
     }
 
     private static String getJsonResponse() throws IOException{
