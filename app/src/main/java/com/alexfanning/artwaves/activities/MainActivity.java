@@ -1,9 +1,11 @@
 package com.alexfanning.artwaves.activities;
 
-import android.content.Intent;
+import android.app.Activity;
+import android.content.Context;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -83,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
+
+
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             selectItem(position - 1);
@@ -125,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     setTitle(title);
                 }
+
+
                 mDrawerLayout.closeDrawer(mDrawerList);
             }
         }
