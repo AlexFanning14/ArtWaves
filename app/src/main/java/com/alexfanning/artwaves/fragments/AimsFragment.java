@@ -52,7 +52,4 @@ public class AimsFragment extends Fragment {
 
     }
 
-
-
-
 }

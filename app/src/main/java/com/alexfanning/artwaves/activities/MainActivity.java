@@ -17,6 +17,7 @@ import android.widget.ListView;
 import com.alexfanning.artwaves.R;
 import com.alexfanning.artwaves.fragments.AimsFragment;
 import com.alexfanning.artwaves.fragments.ArttrailFragment;
+import com.alexfanning.artwaves.fragments.GalleryFragment;
 import com.alexfanning.artwaves.fragments.HomeFragment;
 import com.alexfanning.artwaves.fragments.SubmissionFragment;
 import com.alexfanning.artwaves.navdrawer.DrawerItemCustomAdapter;
@@ -105,11 +106,8 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new SubmissionFragment();
                     break;
                 case 4:
-                    Intent i = new Intent(MainActivity.this,GalleryActivity.class);
-                    startActivity(i);
-                    return;
-                    //fragment = new GalleryFragment();
-
+                    fragment = new GalleryFragment();
+                    break;
                 default:
                     break;
             }

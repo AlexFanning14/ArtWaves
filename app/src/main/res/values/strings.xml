@@ -52,11 +52,9 @@
     <string name="content_fingal">Fingal County Council Logo</string>
     <string name="content_arts_council">Arts Council Logo</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
     <!-- Gallery Fragment -->
+    <string name="gal_error" translatable="true">Apologies there has been an error loading the gallery. Check network connection.</string>
 
 
 </resources>

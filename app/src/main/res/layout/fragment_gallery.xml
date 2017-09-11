@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alexfanning.artwaves.fragments.GalleryFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_gallery"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/TextViewStyleNormal"
+        android:visibility="gone"
+        android:id="@+id/tv_error_gallery"
+        android:text="@string/gal_error"
+        />
+    <ProgressBar
+        android:layout_width="@dimen/prog_bar_size"
+        android:layout_height="@dimen/prog_bar_size"
+        android:id="@+id/pb_gallery"
+        android:visibility="gone"
+        />
+
+
+</FrameLayout>

@@ -22,17 +22,13 @@ import java.util.Locale;
 public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.VenueViewHolder> {
     private static final String TAG = VenueDataAdapter.class.getSimpleName();
     private Venue[] venues;
-    private static int sViewHolderCount;
-    private int mNumberItems;
     private Context context;
 
     private static final String GEO_STR = "geo:";
 
     public VenueDataAdapter(Venue[] venues, Context c){
-        mNumberItems = venues.length;
         this.venues = venues;
         this.context = c;
-        sViewHolderCount = 0;
     }
 
     @Override
@@ -41,7 +37,6 @@ public class VenueDataAdapter extends RecyclerView.Adapter<VenueDataAdapter.Venu
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(layoutIdForGridItem, parent, false);
         VenueViewHolder venueViewHolder = new VenueViewHolder(view);
-        sViewHolderCount++;
         return venueViewHolder;
     }
 

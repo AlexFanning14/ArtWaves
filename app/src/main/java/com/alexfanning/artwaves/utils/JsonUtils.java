@@ -2,6 +2,7 @@ package com.alexfanning.artwaves.utils;
 
 import android.util.Log;
 
+import com.alexfanning.artwaves.galleryitems.Gallery;
 import com.alexfanning.artwaves.venueitems.Venue;
 
 import org.json.JSONArray;
@@ -21,9 +22,11 @@ import java.util.Scanner;
 
 public class JsonUtils {
     private static final String TAG = JsonUtils.class.getSimpleName();
-    private static final String URL_STR = "https://artwaves.000webhostapp.com/arttrail-date.txt";
+    private static final String URL_STR_ARTTRAIL = "https://artwaves.000webhostapp.com/arttrail-date.txt";
+    private static final String URL_STR_GALLERY = "https://artwaves.000webhostapp.com/galleryitems.txt";
     private static final String EMPTY_STRING = "";
     private static final String VENUES_KEY = "venues";
+
     private static final String NAME_KEY = "name";
     private static final String LOCATION_KEY = "location";
     private static final String DATE_KEY = "date";
@@ -32,22 +35,39 @@ public class JsonUtils {
     private static final String SCANNER_DELIMETTER = "\\A";
     private static final String COORDINATE_SPLITTER = "\\s*,\\s*";
 
+    private static final String GALLERY_KEY = "galleryitems";
+    private static final String ARTIST_KEY = "Artist";
+    private static final String IMG_KEY = "ImgSrc";
+    private static final String TITLE_KEY = "Title";
+
+
     private static Venue[] vens;
 
     public static Venue[] getVens(){
         String json = EMPTY_STRING;
         try{
-            json = getJsonResponse();
+            json = getJsonResponse(URL_STR_ARTTRAIL);
         }catch (Exception e) {
             return null;
         }
         return getVenuesFromJson(json);
     }
 
-    private static String getJsonResponse() throws IOException{
+    public static Gallery[] getGallery(){
+        String json = EMPTY_STRING;
+        try{
+            json = getJsonResponse(URL_STR_GALLERY);
+        }catch (Exception e) {
+            return null;
+        }
+        return getGalleryFromJson(json);
+    }
+
+
+    private static String getJsonResponse(String urlStr) throws IOException{
        URL url = null;
         try{
-            url = new URL(URL_STR);
+            url = new URL(urlStr);
         }catch (Exception e) {
             return null;
         }
@@ -69,6 +89,31 @@ public class JsonUtils {
 
         }
     }
+
+    private static Gallery[] getGalleryFromJson(String jsonStr ){
+        Gallery[] gal = null;
+        JSONObject jsonObj = null;
+        try{
+            jsonObj = new JSONObject(jsonStr);
+            JSONArray galleryJsonArray = jsonObj.getJSONArray(GALLERY_KEY);
+            int numGal = galleryJsonArray.length();
+            gal = new Gallery[numGal];
+
+            for (int i = 0; i < numGal; i++){
+                JSONObject g = galleryJsonArray.getJSONObject(i);
+                String artist = g.getString(ARTIST_KEY);
+                String title = g.getString(TITLE_KEY);
+                String imgSrc = g.getString(IMG_KEY);
+                Gallery galObj = new Gallery(title,imgSrc,artist);
+                gal[i] = galObj;
+            }
+            return gal;
+        }catch(Exception e) {
+            return null;
+        }
+
+    }
+
 
     private static Venue[] getVenuesFromJson(String jsonStr ){
         Venue[] vens = null;
