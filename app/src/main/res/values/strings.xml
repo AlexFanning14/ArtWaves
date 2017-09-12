@@ -55,9 +55,9 @@
 
     <!-- Gallery Fragment -->
     <string name="gal_error" translatable="true">Apologies there has been an error loading the gallery. Check network connection.</string>
+    <string name="gal_key" translatable="false">gal_key</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <!--Gallery Detail-->
+    <string name="gallery_label">Gallery</string>
 
 </resources>

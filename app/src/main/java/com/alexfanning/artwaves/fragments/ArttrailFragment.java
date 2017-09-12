@@ -35,6 +35,10 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
     private VenueDataAdapter mVenueDatapter;
     private ProgressBar mProgBar;
     private TextView mTextViewError;
+    private static final String POS_KEY = "key";
+    private static int sPos = -1;
+    private LinearLayoutManager lm;
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -47,8 +51,8 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
         View rootView = inflater.inflate(R.layout.fragment_arttrail,container,false);
 
         findViews(rootView);
-
-        mVenueRv.setLayoutManager(new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false));
+        lm = new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false);
+        mVenueRv.setLayoutManager(lm);
         mVenueRv.setHasFixedSize(true);
         setUpVenues();
         return rootView;
@@ -94,6 +98,7 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
             mVenueRv.setVisibility(View.VISIBLE);
             mVenueDatapter = new VenueDataAdapter(venues,mContext);
             mVenueRv.setAdapter(mVenueDatapter);
+            restoreGridPosition();
         }
     }
 
@@ -104,6 +109,24 @@ public class ArttrailFragment extends Fragment implements LoaderManager.LoaderCa
     }
 
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(POS_KEY,lm.findFirstCompletelyVisibleItemPosition());
+    }
 
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (savedInstanceState != null){
+            sPos = savedInstanceState.getInt(POS_KEY);
+            restoreGridPosition();
+        }
+    }
 
+    private void restoreGridPosition(){
+        if (sPos != -1){
+            lm.scrollToPosition(sPos);
+        }
+    }
 }

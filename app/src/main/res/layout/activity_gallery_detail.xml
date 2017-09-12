@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.alexfanning.artwaves.activities.GalleryDetailActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_view_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_standard"
+                android:background="@color/colorBlack"
+                android:padding="@dimen/border_width" />
+
+            <TextView
+                android:id="@+id/tv_network_detail"
+                style="@style/TextViewStyleNormalSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard"
+                android:gravity="center"
+                android:text="@string/gal_error"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_title_detail"
+                style="@style/TextViewStyleHeaderSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard" />
+
+            <TextView
+                android:id="@+id/tv_artist_detail"
+                style="@style/TextViewStyleHeaderSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

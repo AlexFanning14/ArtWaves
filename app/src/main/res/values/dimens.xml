@@ -18,4 +18,6 @@
     <dimen name="drawer_divider">0dp</dimen>
 
     <dimen name="drawer_item_padding">10dp</dimen>
+
+    <dimen name="rv_staggered_margins">4dp</dimen>
 </resources>

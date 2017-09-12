@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.alexfanning.artwaves.fragments.AimsFragment"
-    android:weightSum="3">
+    android:weightSum="4">
 
     <TextView
         android:layout_width="match_parent"
@@ -24,5 +24,31 @@
         android:layout_weight="2"
         android:id="@+id/tv_bullet_points"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_banner_left"
+        android:src="@drawable/bannerleft"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/margin_standard"
+        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_banner_right"
+            android:src="@drawable/bannerright"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_standard"
+            />
+
+    </LinearLayout>
+
 
 </LinearLayout>

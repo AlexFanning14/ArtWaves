@@ -23,12 +23,17 @@ public class GalleryDataAdapter extends RecyclerView.Adapter<GalleryDataAdapter.
     private static final String TAG = GalleryDataAdapter.class.getSimpleName();
     private Gallery[] mGalleries;
     private Context context;
+    private final ListItemClickListener mOnClickListener;
 
-    public GalleryDataAdapter(Gallery[] galleries, Context context) {
+    public GalleryDataAdapter(Gallery[] galleries, Context context, ListItemClickListener listener) {
         this.mGalleries = galleries;
         this.context = context;
+        mOnClickListener = listener;
     }
 
+    public interface ListItemClickListener {
+        void onListItemClick(Gallery g);
+    }
 
     @Override
     public GalleryDataAdapter.GalleryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -49,7 +54,7 @@ public class GalleryDataAdapter extends RecyclerView.Adapter<GalleryDataAdapter.
         return mGalleries.length;
     }
 
-    class GalleryViewHolder extends RecyclerView.ViewHolder{
+    class GalleryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView mImgView = null;
         TextView mTvtest = null;
@@ -58,6 +63,7 @@ public class GalleryDataAdapter extends RecyclerView.Adapter<GalleryDataAdapter.
             super(itemView);
             mImgView = (ImageView)itemView.findViewById(R.id.img_view_gallery);
             mTvtest = (TextView)itemView.findViewById(R.id.tv_test);
+            itemView.setOnClickListener(this);
         }
 
         void bind(Gallery g){
@@ -66,6 +72,13 @@ public class GalleryDataAdapter extends RecyclerView.Adapter<GalleryDataAdapter.
             mImgView.setContentDescription(g.getTitle());
         }
 
+        @Override
+        public void onClick(View v) {
+            int clickedPos = getAdapterPosition();
+
+            Gallery selectedG = mGalleries[clickedPos];
+            mOnClickListener.onListItemClick(selectedG);
+        }
     }
 
 

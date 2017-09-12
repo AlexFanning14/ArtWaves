@@ -2,13 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlack"
-    tools:context="com.alexfanning.artwaves.fragments.GalleryFragment">
+    tools:context="com.alexfanning.artwaves.fragments.GalleryFragment"
+    android:padding="@dimen/rv_staggered_margins">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBlack"
         android:id="@+id/rv_gallery"
         />
     <TextView
@@ -26,9 +25,7 @@
         android:layout_width="@dimen/prog_bar_size"
         android:layout_height="@dimen/prog_bar_size"
         android:layout_gravity="center"
-        android:visibility="gone"
+        android:visibility="gone" />
 
-        />
-    
 
 </FrameLayout>
