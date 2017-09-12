@@ -18,7 +18,7 @@
         <item>@string/nav_gallery</item>
     </string-array>
 
-    <string name="submission_header">ArtWaves Submission</string>
+    <string name="submission_header" translatable="true">ArtWaves Submission</string>
 
     <!--ArtTrail frag-->
     <string name="arttrail_header" translatable="true">ArtTrail 2017</string>
@@ -48,9 +48,9 @@
     <string name="enter_info" translatable="true">Once you\'re ready to make your submission, head over to our submission page on our website at https://www.culturefestskerries.com/artwaves-open-submission2017</string>
 
     <!--Content descript-->
-    <string name="content_artwaves_img">Artwaves Logo</string>
-    <string name="content_fingal">Fingal County Council Logo</string>
-    <string name="content_arts_council">Arts Council Logo</string>
+    <string name="content_artwaves_img" translatable="true">Artwaves Logo</string>
+    <string name="content_fingal" translatable="true">Fingal County Council Logo</string>
+    <string name="content_arts_council" translatable="true">Arts Council Logo</string>
 
 
     <!-- Gallery Fragment -->
@@ -58,6 +58,6 @@
     <string name="gal_key" translatable="false">gal_key</string>
 
     <!--Gallery Detail-->
-    <string name="gallery_label">Gallery</string>
+    <string name="gallery_label" translatable="true">Gallery</string>
 
 </resources>

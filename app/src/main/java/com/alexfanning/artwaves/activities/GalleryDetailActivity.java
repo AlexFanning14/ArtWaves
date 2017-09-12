@@ -9,10 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.alexfanning.artwaves.R;
 import com.alexfanning.artwaves.galleryitems.Gallery;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 public class GalleryDetailActivity extends AppCompatActivity {
@@ -21,6 +23,7 @@ public class GalleryDetailActivity extends AppCompatActivity {
     private TextView tvTitle;
     private TextView tvArtist;
     private TextView tvError;
+    private ProgressBar progressBar;
     private static final String OLD_FORMAT = "?format=300w";
     private static final String NEW_FORMAT = "?format=1000w";
 
@@ -54,6 +57,7 @@ public class GalleryDetailActivity extends AppCompatActivity {
         tvTitle = (TextView) findViewById(R.id.tv_title_detail);
         tvArtist = (TextView) findViewById(R.id.tv_artist_detail);
         tvError = (TextView)findViewById(R.id.tv_network_detail);
+        progressBar = (ProgressBar)findViewById(R.id.prog_bar_detail);
     }
 
     private void populateFields(){
@@ -62,7 +66,16 @@ public class GalleryDetailActivity extends AppCompatActivity {
         tvArtist.setVisibility(View.VISIBLE);
         imgView.setVisibility(View.VISIBLE);
         String newImgSrc = g.getImgSrc().replace(OLD_FORMAT,NEW_FORMAT);
-        Picasso.with(this).load(newImgSrc).into(imgView);
+        Picasso.with(this).load(newImgSrc).into(imgView, new Callback() {
+            @Override
+            public void onSuccess() {
+                progressBar.setVisibility(View.GONE);
+            }
+            @Override
+            public void onError() {
+                displayError();
+            }
+        });
         tvTitle.setText(g.getTitle());
         tvArtist.setText(g.getArtist());
     }
@@ -76,6 +89,7 @@ public class GalleryDetailActivity extends AppCompatActivity {
     }
 
     private void displayError(){
+        progressBar.setVisibility(View.GONE);
         tvError.setVisibility(View.VISIBLE);
         tvTitle.setVisibility(View.GONE);
         tvArtist.setVisibility(View.GONE);
